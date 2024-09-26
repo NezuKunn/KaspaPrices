@@ -39,7 +39,7 @@ async def aloa(bot):
                 ca = "📈"
                 index = 1
 
-            message_text = f"{ca} <b>${round(float(response['price']), 6)}</b> USDC"
+            message_text = f"{ca} <b>${round(float(response['price']), 6)}</b> USDT"
 
             price = float(response['price'])
 
@@ -112,7 +112,7 @@ async def da(callback_query: types.CallbackQuery, state: FSMContext):
                 ca = "📈"
                 index = 1
 
-            message_text = f"{ca} <b>${round(float(response['price']), 6)}</b> USDC"
+            message_text = f"{ca} <b>${round(float(response['price']), 6)}</b> USDT"
 
             await state.update_data(price=float(response['price']))
 
