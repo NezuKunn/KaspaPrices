@@ -34,9 +34,9 @@ async def aloa(bot):
             response = requests.get(url, headers=headers).json()
 
             if index == 1:
-                ca = "📉" if price > float(response['price']) else "📈"
+                ca = "🔴" if price > float(response['price']) else "🟢"
             else:
-                ca = "📈"
+                ca = "🟢"
                 index = 1
 
             message_text = f"{ca} <b>${round(float(response['price']), 6)}</b> USDT"
